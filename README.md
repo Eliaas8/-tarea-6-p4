@@ -14,14 +14,7 @@ KeyDB
 
 redis-py
 
-Estructura del proyecto
-biblioteca_web/
-├── app.py
-├── db.py
-├── .env
-├── requirements.txt
-├── templates/
-└── static/
+
 
 Configuración
 
