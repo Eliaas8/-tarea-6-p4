@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<a href="{{ url_for('add') }}">Agregar libro</a>
+
+<form action="/search">
+    <select name="criterio">
+        <option value="titulo">Título</option>
+        <option value="autor">Autor</option>
+        <option value="genero">Género</option>
+    </select>
+    <input type="text" name="valor">
+    <button type="submit">Buscar</button>
+</form>
+
+<ul>
+{% for l in libros %}
+    <li>
+        {{ l.titulo }} - {{ l.autor }} ({{ l.genero }}) [{{ l.estado }}]
+        <a href="/edit/{{ l.id }}">Editar</a>
+        <a href="/delete/{{ l.id }}">Eliminar</a>
+    </li>
+{% endfor %}
+</ul>
+
+{% endblock %}
