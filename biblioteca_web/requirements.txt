@@ -1,0 +1,6 @@
+flask
+redis
+python-dotenv
+
+Instalar:
+pip install -r requirements.txt
